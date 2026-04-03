@@ -17,8 +17,8 @@ commandList =
     ++ "| :?, :h, :help             -> for help                                           |\n"
     ++ "| :q, :quit                 -> for closing the program                            |\n"
     ++ "| <ski-term>                -> shows the term and then evaluates it               |\n"
-    ++ "| :left                     -> for using left-most order reduction                |\n"
-    ++ "| :right                    -> for using right-most order reduction               |\n"
+    ++ "| :left                     -> for using left-most reduction                      |\n"
+    ++ "| :right                    -> for using right-most reduction                     |\n"
     ++ "| :let <var> = <ski-term>   -> assigns a ski-term to an environtment variable     |\n"
     ++ "| :s, :show <var>           -> shows the contents of a variable                   |\n"
     ++ "| :e, :eval <var>           -> evaluates a variable up-to normal form (in-place)  |\n"
@@ -32,7 +32,7 @@ main = runInputT defaultSettings $ repl LeftMost []
   where
     repl :: EvalOrder -> Environment -> InputT IO ()
     repl order env = do
-      maybeInput <- getInputLine "skic> "
+      maybeInput <- getInputLine "skicci> "
       case Just words <*> maybeInput of
         Nothing -> pure ()
         Just (h : []) | elem h [":?", ":h", ":help"] -> outputStrLn commandList >>= \_ -> repl order env
