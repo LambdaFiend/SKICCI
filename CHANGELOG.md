@@ -1,5 +1,5 @@
 # Revision history for SKICCI
 
-## 0.1.0.0 -- 2026-04-02
+## 0.1.0.0 -- 2026-04-03
 
 * Named SKIC. A SKI-Combinators Calculus Interpreter.
