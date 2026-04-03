@@ -1,0 +1,53 @@
+cabal-version: 3.0
+name:          SKICCI
+version:       0.1.0.0
+synopsis:      A SKI-Combinators Calculus Interpreter.
+
+description:
+  This interpreter is meant to help anyone figure out how pure SKI-Combinators work.
+
+homepage:     https://github.com/LambdaFiend/SKIC
+license:      BSD-3-Clause
+license-file: LICENSE
+author:       Lambda Fiend
+maintainer:   thelambdafiend@gmail.com
+
+--copyright:
+
+category:   Language
+build-type: Simple
+
+extra-doc-files:
+  CHANGELOG.md
+  README.md
+
+--extra-source-files:
+
+common warnings
+  --ghc-options: 
+
+executable SKICCI
+  import:         warnings
+  main-is:        Main.hs
+  hs-source-dirs: src
+
+  other-modules:
+    Lexer,
+    Parser,
+    Evaluation,
+    Syntax
+
+  --other-extensions:
+
+  build-depends: 
+    base ^>=4.20.2.0,
+    array ^>=0.5.8.0,
+    haskeline ^>=0.8.2.1
+
+  hs-source-dirs:
+    app
+    src
+
+  default-language: Haskell2010
+
+  --default-extensions:
