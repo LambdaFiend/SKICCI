@@ -2,4 +2,4 @@
 
 ## 0.1.0.0 -- 2026-04-03
 
-* Named SKIC. A SKI-Combinators Calculus Interpreter.
+* Named SKICCI. A SKI-Combinators Calculus Interpreter.
