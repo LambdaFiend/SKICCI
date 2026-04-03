@@ -5,7 +5,7 @@
 
 This is an interpreter made for anyone who might be interested in experimenting with the *SKI-combinators calculus*.
 
-Supports environment variables for *ski-terms*, showing the contents of an environtment variables, displaying the list of environment variables, checking for syntactic same-ness, evaluating n-steps at a time (in-place, for environment variables), *left-most reduction* and *right-most reduction*.
+Supports environment variables for SKI-terms, showing the contents of an environtment variables, displaying the list of environment variables, checking for syntactic same-ness, evaluating n-steps at a time (in-place, for environment variables), left-most reduction and right-most reduction.
 
 I'll be adding a couple more features, eventually.
 
